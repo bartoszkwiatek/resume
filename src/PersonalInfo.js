@@ -5,14 +5,13 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-import Typography from '@material-ui/core/Typography'
 import { Link } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         width: '100%',
         maxWidth: 360,
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: '',
     },
     name: {
         fontSize: '1.6rem',
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 const Profiles = (props) => {
     const profiles = props.array.map((profile, index) =>
         <ListItem key={index} dense>
-            <Link href={profile.url}>{profile.network}</Link>
+            <Link color='primary' href={profile.url}>{profile.network}</Link>
         </ListItem>
     );
     return (
@@ -37,8 +36,6 @@ const Profiles = (props) => {
 
 const PersonalInfo = (props) => {
     const classes = useStyles();
-
-
 
     return (
         <List className={classes.root}>
@@ -53,10 +50,7 @@ const PersonalInfo = (props) => {
                 }} primary={props.data.name} secondary={props.data.label} />
             </ListItem>
             <ListItem dense >
-                <ListItemText primary="About me" secondary={props.data.summary}>
-
-                </ListItemText>
-
+                <ListItemText primary="About me" secondary={props.data.summary} />
             </ListItem>
             <ListItem dense >
                 <Link href={props.data.website} >{props.data.website}</Link>
@@ -67,7 +61,6 @@ const PersonalInfo = (props) => {
             <ListItem dense >
                 <ListItemText primary="Phone" secondary={props.data.phone} />
             </ListItem>
-
             <Profiles array={props.data.profiles} />
         </List >
     );
