@@ -16,14 +16,10 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   const theme = Theme(darkMode);
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-
-  // theme returned from separate file
-  console.log({ prefersDarkMode })
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');   // check prefered user mode 
 
   useEffect(() => {
-    // console.log('state darkMode', darkMode)
-    setDarkMode(prefersDarkMode)//   set as initial state
+    setDarkMode(prefersDarkMode)
 
     fetch("http://localhost:3333/data")
       .then(response => response.json())
@@ -47,7 +43,7 @@ function App() {
   } else {
     return (
       <div>
-        <StoreContext.Provider value={{ data, language }}>
+        <StoreContext.Provider value={{ data, language, setDarkMode, setLanguage }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Container fixed>

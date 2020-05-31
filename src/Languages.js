@@ -24,35 +24,32 @@ const useStyles = makeStyles((theme) => (
         },
         weight: {
             fontWeight: 100,
+        },
+        header: {
+            paddingTop: '1.5rem',
+            fontSize: '1.2rem'
         }
     }));
 
-// const Languages = (props) => {
-//     const profiles = props.array.map((profile, index) =>
-//         <ListItem key={index} dense>
-//             <Link color='primary' href={profile.url}>{profile.network}</Link>
-//         </ListItem>
-//     );
-//     return (
-//         <React.Fragment>
-//             {profiles}
-//         </React.Fragment>
-//     )
-// }
-
-const Languages = (props) => {
+const Languages = () => {
     const classes = useStyles();
     const context = useContext(StoreContext)
 
     const languages = context.data[context.language].languages.map((item, index) =>
-        <React.Fragment key={index}>
+        <List key={index}>
+
             <ListItem >
-                <Typography>
+                <Typography >
                     {item.language}
                 </Typography>
             </ListItem>
             <ListItem className={classes.padBot}>
-                <Grid container spacing={1}>
+                <Grid
+                    container
+                    justify='space-between'
+                    spacing={1}
+                    wrap='nowrap'
+                >
                     <Grid>
                         <Divider orientation='vertical'></Divider>
                     </Grid>
@@ -60,23 +57,19 @@ const Languages = (props) => {
                         let gridItem
                         if (index <= item.fluency) {
                             gridItem = (
-                                <Grid item >
+                                <Grid item className={classes.borderColor}>
                                     <Typography color='primary'>{level}</Typography>
                                 </Grid>
                             )
                         } else {
                             gridItem = (
-                                <Grid item >
+                                <Grid item className={classes.borderColor}>
                                     <Typography className={classes.weight}>{level}</Typography>
                                 </Grid>
                             )
                         }
-
                         return (
                             <React.Fragment key={index}>
-                                <Grid>
-                                    <Divider orientation='vertical'></Divider>
-                                </Grid>
                                 {gridItem}
                                 <Grid>
                                     <Divider orientation='vertical'></Divider>
@@ -87,13 +80,17 @@ const Languages = (props) => {
                     )}
                 </Grid>
             </ListItem>
-        </React.Fragment>
+        </List >
 
     );
     return (
-        <List className={classes.root}>
-            {languages}
-        </List >
+        <React.Fragment>
+            <Typography className={classes.header} variantMapping={{ h3: "h3" }}>Languages</Typography>
+
+            <List className={classes.root}>
+                {languages}
+            </List >
+        </React.Fragment>
 
     );
 }

@@ -12,7 +12,6 @@ const useStyles = makeStyles(() => ({
     root: {
         width: '100%',
         maxWidth: 360,
-        backgroundColor: '',
     },
     name: {
         fontSize: '1.6rem',
