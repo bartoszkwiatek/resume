@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { PersonalInfo } from './PersonalInfo';
 import { Languages } from './Languages';
+import { StoreContext } from './Store';
 
 
-const MainInfo = (props) => {
+
+const MainInfo = () => {
     return (
         <React.Fragment>
             <Paper >
                 <Grid container spacing={5}>
                     <Grid item xs={12} md={4} align="center">
-                        <PersonalInfo data={props.data.basics} />
+                        <PersonalInfo />
                     </Grid>
                     <Grid item xs={12} md={4} align="center">
-                        <Languages data={props.data.languages} />
+                        <Languages />
                     </Grid>
                     <Grid item xs={12} md={4} align="center"></Grid>
                 </Grid>
@@ -23,5 +25,6 @@ const MainInfo = (props) => {
         </React.Fragment>
     );
 }
+// }
 
 export { MainInfo }

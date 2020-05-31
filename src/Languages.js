@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles, ThemeProvider, useTheme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -6,6 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import { Link, Typography, Grid, GridListTile, Divider } from '@material-ui/core';
+import { StoreContext } from './Store';
 
 
 const useStyles = makeStyles((theme) => (
@@ -41,25 +42,23 @@ const useStyles = makeStyles((theme) => (
 
 const Languages = (props) => {
     const classes = useStyles();
+    const context = useContext(StoreContext)
 
-
-    const languages = props.data.map((language, index) =>
+    const languages = context.data[context.language].languages.map((item, index) =>
         <React.Fragment key={index}>
-
             <ListItem >
                 <Typography>
-                    {language.language}
+                    {item.language}
                 </Typography>
-
             </ListItem>
             <ListItem className={classes.padBot}>
                 <Grid container spacing={1}>
                     <Grid>
                         <Divider orientation='vertical'></Divider>
                     </Grid>
-                    {language.scale.map((level, index) => {
+                    {item.scale.map((level, index) => {
                         let gridItem
-                        if (index <= language.fluency) {
+                        if (index <= item.fluency) {
                             gridItem = (
                                 <Grid item >
                                     <Typography color='primary'>{level}</Typography>
@@ -85,20 +84,15 @@ const Languages = (props) => {
                             </React.Fragment>
                         )
                     }
-
                     )}
                 </Grid>
             </ListItem>
-
         </React.Fragment>
 
     );
     return (
         <List className={classes.root}>
             {languages}
-
-
-
         </List >
 
     );

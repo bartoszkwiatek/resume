@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -6,6 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import { Link } from '@material-ui/core';
+import { StoreContext } from './Store';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -22,7 +23,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Profiles = (props) => {
-    const profiles = props.array.map((profile, index) =>
+    const profiles = props.profilesArray.map((profile, index) =>
         <ListItem key={index} dense>
             <Link color='primary' href={profile.url}>{profile.network}</Link>
         </ListItem>
@@ -34,34 +35,37 @@ const Profiles = (props) => {
     )
 }
 
-const PersonalInfo = (props) => {
+const PersonalInfo = () => {
+    const context = useContext(StoreContext)
+    const basics = context.data[context.language].basics
     const classes = useStyles();
 
     return (
         <List className={classes.root}>
             <ListItem divider>
                 <ListItemAvatar style={{ paddingRight: '1rem' }}>
-                    <Avatar src={`/${props.data.picture}`} style={{ height: '6rem', width: '6rem' }}>
+                    <Avatar src={``} style={{ height: '6rem', width: '6rem' }}>
                     </Avatar>
                 </ListItemAvatar>
+                {console.log(basics.name)}
                 <ListItemText classes={{
                     primary: classes.name,
                     secondary: classes.label
-                }} primary={props.data.name} secondary={props.data.label} />
+                }} primary={basics.name} secondary={basics.label} />
             </ListItem>
             <ListItem dense >
-                <ListItemText primary="About me" secondary={props.data.summary} />
+                <ListItemText primary="About me" secondary={basics.summary} />
             </ListItem>
             <ListItem dense >
-                <Link href={props.data.website} >{props.data.website}</Link>
+                <Link href={basics.website} >{basics.website}</Link>
             </ListItem>
             <ListItem dense >
-                <ListItemText primary="E-mail:" secondary={props.data.email} />
+                <ListItemText primary="E-mail:" secondary={basics.email} />
             </ListItem>
             <ListItem dense >
-                <ListItemText primary="Phone" secondary={props.data.phone} />
+                <ListItemText primary="Phone" secondary={basics.phone} />
             </ListItem>
-            <Profiles array={props.data.profiles} />
+            <Profiles profilesArray={basics.profiles} />
         </List >
     );
 }
