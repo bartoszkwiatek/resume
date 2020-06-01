@@ -7,19 +7,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import { Link } from '@material-ui/core';
 import { StoreContext } from './Store';
-
-const useStyles = makeStyles(() => ({
-    root: {
-        width: '100%',
-        maxWidth: 360,
-    },
-    name: {
-        fontSize: '1.6rem',
-    },
-    label: {
-        fontSize: '1.2rem',
-    }
-}));
+import { styles } from './styles';
 
 const Profiles = (props) => {
     const profiles = props.profilesArray.map((profile, index) =>
@@ -37,7 +25,7 @@ const Profiles = (props) => {
 const PersonalInfo = () => {
     const context = useContext(StoreContext)
     const basics = context.data[context.language].basics
-    const classes = useStyles();
+    const classes = styles();
 
     return (
         <List className={classes.root}>

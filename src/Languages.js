@@ -7,32 +7,10 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import { Link, Typography, Grid, GridListTile, Divider } from '@material-ui/core';
 import { StoreContext } from './Store';
-
-
-const useStyles = makeStyles((theme) => (
-    {
-        root: {
-            width: '100%',
-            maxWidth: 360,
-            backgroundColor: '',
-        },
-        primaryBackground: {
-            backgroundColor: theme.palette.primary.main,
-        },
-        padBot: {
-            paddingBottom: '1rem',
-        },
-        weight: {
-            fontWeight: 100,
-        },
-        header: {
-            paddingTop: '1.5rem',
-            fontSize: '1.2rem'
-        }
-    }));
+import { styles } from './styles';
 
 const Languages = () => {
-    const classes = useStyles();
+    const classes = styles();
     const context = useContext(StoreContext)
 
     const languages = context.data[context.language].languages.map((item, index) =>
@@ -85,8 +63,6 @@ const Languages = () => {
     );
     return (
         <React.Fragment>
-            <Typography className={classes.header} variantMapping={{ h3: "h3" }}>Languages</Typography>
-
             <List className={classes.root}>
                 {languages}
             </List >
