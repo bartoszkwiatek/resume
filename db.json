@@ -32,7 +32,8 @@
       "projects": [
         {
           "title": "project title",
-          "website": "www.videofotex.pl",
+          "demo": "www.videofotex.pl",
+          "code": "www.videofotex.pl",
           "summary": "description of project",
           "keywords": [
             "html",
@@ -41,8 +42,20 @@
           ]
         },
         {
+          "title": "Weather app",
+          "demo": "kwiaciu.github.io/angular",
+          "code": "github.com/kwiaciu/anular",
+          "summary": "description of project",
+          "keywords": [
+            "Angular",
+            "REST API",
+            "SCSS"
+          ]
+        },
+        {
           "title": "project title",
-          "website": "www.videofotex.pl",
+          "demo": "www.videofotex.pl",
+          "code": "www.videofotex.pl",
           "summary": "description of project",
           "keywords": [
             "html",
@@ -50,16 +63,6 @@
             "Bootstrap"
           ]
         },
-        {
-          "title": "project title",
-          "website": "www.videofotex.pl",
-          "summary": "description of project",
-          "keywords": [
-            "html",
-            "JQuery",
-            "Bootstrap"
-          ]
-        }
       ],
       "work": [
         {

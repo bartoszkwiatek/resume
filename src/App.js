@@ -1,12 +1,13 @@
-import React, { useState, useEffect, createContext, useReducer, useContext, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { MainInfo } from './MainInfo';
-import { CssBaseline, Typography, useMediaQuery } from '@material-ui/core';
+import { TabsInfo } from './TabsInfo';
+import { CssBaseline, useMediaQuery, Grid } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { dark } from '@material-ui/core/styles/createPalette';
+import { ThemeProvider } from '@material-ui/core/styles';
 import { StoreContext } from './Store';
 import { Theme } from './Theme';
+import { styles } from './styles';
 
 function App() {
   const [error, setError] = useState(null);
@@ -14,8 +15,10 @@ function App() {
   const [data, setData] = useState({});
   const [language, setLanguage] = useState('en');
   const [darkMode, setDarkMode] = useState(false);
+  const [primaryColor, setPrimaryColor] = useState('#e91e63');
 
-  const theme = Theme(darkMode);
+  const classes = styles;
+  const theme = Theme(darkMode, primaryColor);
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');   // check prefered user mode 
 
   useEffect(() => {
@@ -43,11 +46,21 @@ function App() {
   } else {
     return (
       <div>
-        <StoreContext.Provider value={{ data, language, setDarkMode, setLanguage }}>
+        <StoreContext.Provider value={{ data, language, setDarkMode, setLanguage, setPrimaryColor }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Container fixed>
-              <MainInfo />
+
+
+              <Grid container spacing={5}>
+                <Grid item>
+                  <MainInfo />
+                </Grid>
+                <Grid item style={{ width: '100%' }}>
+                  <TabsInfo />
+                </Grid>
+
+              </Grid>
             </Container>
           </ThemeProvider>
         </StoreContext.Provider>

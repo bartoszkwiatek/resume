@@ -3,7 +3,9 @@ import { makeStyles } from "@material-ui/core";
 const styles = makeStyles(() => ({
     root: {
         width: '100%',
-        maxWidth: 360,
+    },
+    fill: {
+        width: '100%',
     },
     name: {
         fontSize: '1.6rem',

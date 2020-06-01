@@ -1,11 +1,7 @@
 import React, { useContext } from 'react';
-import { makeStyles, ThemeProvider, useTheme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Avatar from '@material-ui/core/Avatar';
-import { Link, Typography, Grid, GridListTile, Divider } from '@material-ui/core';
+import { Typography, Grid, Divider } from '@material-ui/core';
 import { StoreContext } from './Store';
 import { styles } from './styles';
 

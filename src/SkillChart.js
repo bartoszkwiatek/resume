@@ -1,8 +1,7 @@
 import React, { useContext, useRef, useEffect } from 'react'
 import Chart from 'chart.js'
 import { StoreContext } from './Store';
-import { Theme } from './Theme';
-import { makeStyles, useTheme, BottomNavigation } from '@material-ui/core';
+import { useTheme } from '@material-ui/core';
 
 const SkillChart = () => {
     const theme = useTheme();
@@ -19,11 +18,10 @@ const SkillChart = () => {
     console.log(skillLabels)
     console.log(skillLevels)
     useEffect(() => {
-
         Chart.defaults.global.defaultFontColor = theme.palette.primary.contrastText;
         Chart.defaults.global.defaultFontFamily = "Roboto";
 
-        const myChart = new Chart(canvasRef.current, {
+        new Chart(canvasRef.current, {
             type: 'radar',
             options: {
                 responsive: true,
@@ -70,20 +68,9 @@ const SkillChart = () => {
                 }]
             }
         }, [])
-        // data: {
-        //     labels: this.props.data.map(d => d.label),
-        //     datasets: [{
-        //         data: this.props.data.map(d => d.value),
-        //         backgroundColor: this.props.colors
-        //     }]
-        // }
     });
 
-
-
-
     return <canvas style={{ width: '100%' }} ref={canvasRef} />;
-
 }
 
 export { SkillChart }
