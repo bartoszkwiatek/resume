@@ -19,6 +19,9 @@ const styles = makeStyles(() => ({
     header: {
         paddingTop: '1.5rem',
         fontSize: '1.2rem'
+    },
+    pinkColor: {
+        color: 'hotpink'
     }
 }));
 

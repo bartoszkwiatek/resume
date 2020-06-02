@@ -18,7 +18,7 @@ const SkillChart = () => {
     console.log(skillLabels)
     console.log(skillLevels)
     useEffect(() => {
-        Chart.defaults.global.defaultFontColor = theme.palette.primary.contrastText;
+        Chart.defaults.global.defaultFontColor = theme.palette.text.primary;
         Chart.defaults.global.defaultFontFamily = "Roboto";
 
         new Chart(canvasRef.current, {
@@ -67,7 +67,7 @@ const SkillChart = () => {
 
                 }]
             }
-        }, [])
+        }, [theme])
     });
 
     return <canvas style={{ width: '100%' }} ref={canvasRef} />;

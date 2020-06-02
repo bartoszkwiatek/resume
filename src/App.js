@@ -8,6 +8,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { StoreContext } from './Store';
 import { Theme } from './Theme';
 import { styles } from './styles';
+import { ModeSwitch } from './ModeSwitch';
 
 function App() {
   const [error, setError] = useState(null);
@@ -45,13 +46,11 @@ function App() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div>
-        <StoreContext.Provider value={{ data, language, setDarkMode, setLanguage, setPrimaryColor }}>
+      <React.Fragment>
+        <StoreContext.Provider value={{ data, language, darkMode, setDarkMode, setLanguage, setPrimaryColor }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Container fixed>
-
-
               <Grid container spacing={5}>
                 <Grid item>
                   <MainInfo />
@@ -61,10 +60,11 @@ function App() {
                 </Grid>
 
               </Grid>
+              <ModeSwitch />
             </Container>
           </ThemeProvider>
         </StoreContext.Provider>
-      </div>
+      </React.Fragment>
 
 
     )
