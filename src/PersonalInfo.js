@@ -43,7 +43,7 @@ const PersonalInfo = () => {
                 <ListItemText primary="About me" secondary={basics.summary} />
             </ListItem>
             <ListItem dense >
-                <Link href={basics.website} >{basics.website}</Link>
+                <Link fontWeight="300" href={basics.website} >{basics.website}</Link>
             </ListItem>
             <ListItem dense >
                 <ListItemText primary="E-mail:" secondary={basics.email} />

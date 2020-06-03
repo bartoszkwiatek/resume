@@ -23,6 +23,7 @@ const styles = makeStyles(() => ({
     pinkColor: {
         color: 'hotpink'
     }
+
 }));
 
 export { styles }

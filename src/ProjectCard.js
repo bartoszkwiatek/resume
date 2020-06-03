@@ -1,34 +1,33 @@
 import React from 'react';
 import { Card, CardActionArea, CardMedia, CardContent, Typography, Button, CardActions } from '@material-ui/core';
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
     return (
         <Card className={'card'}>
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    alt="Contemplative Reptile"
-                    height="140"
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    title="Contemplative Reptile"
+                    alt="Screenshot of project"
+                    height="100"
+                    image={props.imgUrl}
+                    title={props.title}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
-          </Typography>
+                        {props.title}
+                    </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-          </Typography>
+                        {props.description}
+                    </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
-                    Share
-        </Button>
-                <Button size="small" color="primary">
-                    Learn More
-        </Button>
+                <Button size="small" color="primary" href={props.demoUrl}>
+                    Demo
+                </Button>
+                <Button size="small" color="primary" href={props.codeUrl}>
+                    Code
+                </Button>
             </CardActions>
         </Card>
     )
