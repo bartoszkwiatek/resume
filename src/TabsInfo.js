@@ -1,5 +1,5 @@
-import React, { useState, useContext, useMemo, forwardRef } from 'react';
-import { Paper, Tabs, Tab, useTheme, Typography } from '@material-ui/core';
+import React, { useState, useContext } from 'react';
+import { Paper, Tabs, Tab, useTheme, useMediaQuery, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import CodeIcon from '@material-ui/icons/Code';
 import LinkIcon from '@material-ui/icons/Link';
@@ -13,38 +13,16 @@ import { StoreContext } from './Store';
 import { styles } from './styles';
 import { Projects } from './Projects'
 import { TabPanel } from './TabPanel';
-import { BrowserRouter } from 'react-router-dom';
-import { Link as RouterLink } from 'react-router-dom';
 import SwipeableViews from 'react-swipeable-views';
-
-
-// const RoutingLink(props) {
-//     const { icon, label, to } = props;
-
-//     const renderLink = useMemo(
-//         () => forwardRef((itemProps, ref) => <RouterLink to={to} ref={ref} {...itemProps} />),
-//         [to],
-//     );
-
-//     return (
-//         <React.Fragment>
-//             <Tab button component={renderLink} />
-
-//         </React.Fragment>
-//     );
-// }
+import { Education } from './Education';
 
 
 const TabsInfo = () => {
     const context = useContext(StoreContext)
     const classes = styles();
     const theme = useTheme();
-
     const [value, setValue] = useState(0);
     const colors = ['#e91e63', '#0097a7', '#2196f3', '#fdd835']
-
-
-
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -58,42 +36,46 @@ const TabsInfo = () => {
     };
 
     return (
-        <Paper square className={classes.root}>
-            <BrowserRouter>
+        <Container maxWidth="xl" style={{ padding: 0 }}>
+
+            <Paper square className={classes.root}>
                 <Tabs
-                    className={classes.root}
+                    // className={classes.root}
                     value={value}
                     onChange={handleChange}
-                    centered
                     indicatorColor="primary"
                     textColor="primary"
-                >
-                    <Tab icon={<CodeIcon />} label="Projects" component={RouterLink} to="/" />
-                    <Tab icon={<SchoolIcon />} label="Education" component={RouterLink} to="/education" />
-                    <Tab icon={<WorkIcon />} label="Experience" component={RouterLink} to="/experience" />
-                    <Tab icon={<PaletteIcon />} label="Skills" component={RouterLink} to="/skills" />
-                </Tabs>
-            </BrowserRouter>
+                    centered
 
-            <SwipeableViews
-                axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                index={value}
-                onChangeIndex={handleChangeIndex}
-            >
-                <TabPanel value={value} index={0} dir={theme.direction}>
-                    <Projects />
+                >
+                    <Tab icon={<CodeIcon />} label="Projects" />
+                    <Tab icon={<SchoolIcon />} label="Education" />
+                    <Tab icon={<WorkIcon />} label="Experience" />
+                    <Tab icon={<PaletteIcon />} label="Skills" />
+                </Tabs>
+
+                <SwipeableViews
+                    axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                    index={value}
+                    onChangeIndex={handleChangeIndex}
+                >
+
+                    <TabPanel value={value} index={0} dir={theme.direction}>
+                        <Projects />
+                    </TabPanel>
+                    <TabPanel value={value} index={1} dir={theme.direction}>
+                        Item Two
                 </TabPanel>
-                <TabPanel value={value} index={1} dir={theme.direction}>
-                    Item Two
+                    <TabPanel value={value} index={2} dir={theme.direction}>
+                        Item Three
                 </TabPanel>
-                <TabPanel value={value} index={2} dir={theme.direction}>
-                    Item Three
+                    <TabPanel value={value} index={3} dir={theme.direction}>
+                        Item Four
                 </TabPanel>
-                <TabPanel value={value} index={3} dir={theme.direction}>
-                    Item Four
-                </TabPanel>
-            </SwipeableViews>
-        </Paper >
+                </SwipeableViews>
+
+            </Paper >
+        </Container>
     );
 }
 

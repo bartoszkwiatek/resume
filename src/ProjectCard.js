@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardActionArea, CardMedia, CardContent, Typography, Button, CardActions } from '@material-ui/core';
+import { Card, CardActionArea, CardMedia, CardContent, Typography, Button, CardActions, Chip, Grid } from '@material-ui/core';
 
 const ProjectCard = (props) => {
     return (
@@ -19,9 +19,21 @@ const ProjectCard = (props) => {
                     <Typography variant="body2" color="textSecondary" component="p">
                         {props.description}
                     </Typography>
+                    <Grid container
+                        justify='space-evenly'
+                        flexwrap='wrap'>
+                        {props.keywords.map((keyword, index) => {
+                            return (
+                                <Grid style={{ margin: '0.2rem' }} key={index} item>
+                                    <Chip label={keyword} />
+                                </Grid>
+
+                            )
+                        })}
+                    </Grid>
                 </CardContent>
             </CardActionArea>
-            <CardActions>
+            <CardActions style={{ 'justify-content': 'flex-end' }}>
                 <Button size="small" color="primary" href={props.demoUrl}>
                     Demo
                 </Button>
@@ -29,7 +41,7 @@ const ProjectCard = (props) => {
                     Code
                 </Button>
             </CardActions>
-        </Card>
+        </Card >
     )
 }
 export { ProjectCard }
