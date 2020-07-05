@@ -47,7 +47,8 @@ function App() {
   } else {
     return (
       <React.Fragment>
-        <StoreContext.Provider value={{ data, language, darkMode, setDarkMode, setLanguage, setPrimaryColor }}>
+        <StoreContext.Provider
+          value={{ data, language, darkMode, setDarkMode, setLanguage, setPrimaryColor }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Container fixed>

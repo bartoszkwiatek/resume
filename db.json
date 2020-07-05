@@ -31,36 +31,39 @@
       },
       "projects": [
         {
-          "title": "project title",
-          "demo": "www.videofotex.pl",
-          "code": "www.videofotex.pl",
-          "summary": "description of project",
+          "title": "Task planner",
+          "demo": "https://kwiaciu.github.io/GanttChartCreator",
+          "code": "https://github.com/kwiaciu/GanttChartCreator",
+          "summary": "Web app for planning tasks in calendar. It offers basic functions such as adding, modifying and removing tasks. Also it has additional features such as adding subtasks, colors, few options of customising look. Saving data is implemented through localStorage.",
+          "img": "",
           "keywords": [
-            "html",
-            "JQuery",
-            "Bootstrap"
+            "React",
+            "Hooks",
+            "Redux",
+            "Material-UI",
+            "localStorage"
           ]
         },
         {
           "title": "Weather app",
-          "demo": "kwiaciu.github.io/angular",
-          "code": "github.com/kwiaciu/anular",
-          "summary": "description of project",
+          "demo": "https://kwiaciu.github.io/WeatherApp/",
+          "code": "https://github.com/kwiaciu/WeatherApp",
+          "summary": "Angular app checking for checking current and future weather for location input. Data is supplied by openweathermap.org",
           "keywords": [
             "Angular",
             "REST API",
-            "SCSS"
+            "SCSS",
+            "TypeScript"
           ]
         },
         {
-          "title": "project title",
-          "demo": "www.videofotex.pl",
-          "code": "www.videofotex.pl",
-          "summary": "description of project",
+          "title": "Password generator",
+          "demo": "https://kwiaciu.github.io/PasswordGenerator/",
+          "code": "https://github.com/kwiaciu/PasswordGenerator",
+          "summary": "Generates four passwords of set length: random characters, password made from words, numbers, only letters",
           "keywords": [
-            "html",
-            "JQuery",
-            "Bootstrap"
+            "React",
+            "Class Components"
           ]
         }
       ],
@@ -110,12 +113,12 @@
       ],
       "education": [
         {
-          "institution": "WSB University",
+          "institution": "WSB University Wroclaw",
           "area": "Front End Developer with Angular",
           "studyType": "Postgraduate studies",
           "startDate": "2019-10-19",
           "endDate": "2020-07-10",
-          "gpa": "",
+          "desc": "Postgraduate studies about front-end development. Courses included: basics of UI and UX prototyping, RWD, CSS preprocessors, backend basics(node, express), creating single page apps using pure JS, JQuery, Angular and React, testing basics (Cypress).",
           "courses": [
             "EcmaScript6",
             "React and Redux",
@@ -130,7 +133,7 @@
           "studyType": "Google Developer Challenge Scholarship",
           "startDate": "2017-11-06",
           "endDate": "2018-01-06",
-          "gpa": "",
+          "desc": "",
           "courses": [
             "HTML5",
             "CSS",
@@ -142,10 +145,10 @@
         {
           "institution": "Wroclaw University of Technology",
           "area": "Aeronautical Engineering",
-          "studyType": "Master",
+          "studyType": "Master's degree",
           "startDate": "2016-03-01",
           "endDate": "2018-07-12",
-          "gpa": "",
+          "desc": "",
           "courses": [
             ""
           ]
@@ -153,10 +156,10 @@
         {
           "institution": "Wroclaw University of Technology",
           "area": "Mechanical Engineering",
-          "studyType": "Bachelor",
+          "studyType": "Bachelor's degree",
           "startDate": "2012-10-01",
           "endDate": "2016-02-16",
-          "gpa": "",
+          "desc": "",
           "courses": [
             ""
           ]

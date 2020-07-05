@@ -1,19 +1,20 @@
+
 import React, { useContext } from 'react';
 import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, makeStyles } from '@material-ui/core';
 import { StoreContext } from './Store';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { formatDate } from './formatDate'
-
 const useStyles = makeStyles({
   summary: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    marginBottom: 0
-
   },
+  expanded: {
+    marginBottom: 0
+  }
 });
 
-const Education = (props) => {
+const Experience = (props) => {
   const { children, value, index, ...other } = props;
   const classes = useStyles();
   const context = useContext(StoreContext);
@@ -26,7 +27,7 @@ const Education = (props) => {
       <Grid container spacing={10}>
         {value === index && (
 
-          context.data[context.language].education.map((school, index) => {
+          context.data[context.language].work.map((job, index) => {
             return (
               <Grid item xs={12} align="center" key={index}>
                 <ExpansionPanel>
@@ -35,35 +36,35 @@ const Education = (props) => {
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
+
                   >
                     <Typography
                       className={''}
                       variant={'overline'}
-                    >{formatDate(school.startDate) + ' - ' + formatDate(school.endDate)}
+                    >{formatDate(job.startDate) + ' - ' + formatDate(job.endDate)}
                     </Typography>
                     <Typography
                       className={''}
                       variant={'h5'}
-                    >{school.area}
+                    >{job.position}
                     </Typography>
                     <Typography
                       className={''}
                       variant={'subtitle1'}
+
                     >
-                      {school.studyType}
+                      {job.company}
                     </Typography>
                   </ExpansionPanelSummary>
                   <ExpansionPanelDetails
                     className={classes.summary}
                   >
-                    <Typography variant="overline">
-                      {school.institution}
-                    </Typography>
+
                     <Typography
                       variant="body1"
                       align="justify"
                     >
-                      {school.desc}
+                      {job.summary}
                     </Typography>
                   </ExpansionPanelDetails>
                 </ExpansionPanel>
@@ -76,4 +77,4 @@ const Education = (props) => {
     </div >
   )
 }
-export { Education }
+export { Experience }
