@@ -1,6 +1,6 @@
 
 import React, { useContext } from 'react';
-import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, makeStyles } from '@material-ui/core';
+import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, makeStyles, List, ListItem } from '@material-ui/core';
 import { StoreContext } from './Store';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { formatDate } from './formatDate'
@@ -51,7 +51,6 @@ const Experience = (props) => {
                     <Typography
                       className={''}
                       variant={'subtitle1'}
-
                     >
                       {job.company}
                     </Typography>
@@ -59,13 +58,19 @@ const Experience = (props) => {
                   <ExpansionPanelDetails
                     className={classes.summary}
                   >
-
                     <Typography
                       variant="body1"
                       align="justify"
                     >
                       {job.summary}
                     </Typography>
+                    <List>
+                      {job.highlights.map((point, index) => {
+                        return (<ListItem key={index}>
+                          {point}
+                        </ListItem>)
+                      })}
+                    </List>
                   </ExpansionPanelDetails>
                 </ExpansionPanel>
               </Grid>

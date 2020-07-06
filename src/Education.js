@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, makeStyles } from '@material-ui/core';
+import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, makeStyles, List, ListItem } from '@material-ui/core';
 import { StoreContext } from './Store';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { formatDate } from './formatDate'
@@ -8,7 +8,6 @@ const useStyles = makeStyles({
   summary: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    marginBottom: 0
 
   },
 });
@@ -65,6 +64,13 @@ const Education = (props) => {
                     >
                       {school.desc}
                     </Typography>
+                    <List>
+                      {school.courses.map((point, index) => {
+                        return (<ListItem key={index}>
+                          {point}
+                        </ListItem>)
+                      })}
+                    </List>
                   </ExpansionPanelDetails>
                 </ExpansionPanel>
               </Grid>

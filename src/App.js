@@ -7,7 +7,7 @@ import Container from '@material-ui/core/Container';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { StoreContext } from './Store';
 import { Theme } from './Theme';
-import { styles } from './styles';
+// import { styles } from './styles';
 import { ModeSwitch } from './ModeSwitch';
 
 function App() {
@@ -18,20 +18,20 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [primaryColor, setPrimaryColor] = useState('#e91e63');
 
-  const classes = styles;
+  // const classes = styles;
   const theme = Theme(darkMode, primaryColor);
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');   // check prefered user mode 
 
   useEffect(() => {
     setDarkMode(prefersDarkMode)
 
+    // fetch("/cv/db.json")
     fetch("http://localhost:3333/data")
       .then(response => response.json())
       .then(
         (result) => {
           setData(result);
           setIsLoaded(true);
-          console.log(result)
         },
         (error) => {
           setError(error);
@@ -59,7 +59,6 @@ function App() {
                 <Grid item style={{ width: '100%' }}>
                   <TabsInfo />
                 </Grid>
-
               </Grid>
               <ModeSwitch />
             </Container>

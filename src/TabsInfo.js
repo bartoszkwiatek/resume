@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
-import { Paper, Tabs, Tab, useTheme, useMediaQuery, Container } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core';
+import { Paper, Tabs, Tab, useTheme, Container } from '@material-ui/core';
+// import { makeStyles } from '@material-ui/core';
 import CodeIcon from '@material-ui/icons/Code';
-import LinkIcon from '@material-ui/icons/Link';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import PaletteIcon from '@material-ui/icons/Palette';
-import HomeIcon from '@material-ui/icons/Home';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+// import LinkIcon from '@material-ui/icons/Link';
+// import GitHubIcon from '@material-ui/icons/GitHub';
+// import PaletteIcon from '@material-ui/icons/Palette';
+// import HomeIcon from '@material-ui/icons/Home';
+// import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import WorkIcon from '@material-ui/icons/Work';
 import SchoolIcon from '@material-ui/icons/School';
 import { StoreContext } from './Store';
@@ -52,7 +52,7 @@ const TabsInfo = () => {
           <Tab icon={<CodeIcon />} label="Projects" />
           <Tab icon={<SchoolIcon />} label="Education" />
           <Tab icon={<WorkIcon />} label="Experience" />
-          <Tab icon={<PaletteIcon />} label="Skills" />
+          {/* <Tab icon={<PaletteIcon />} label="Skills" /> */}
         </Tabs>
 
         <SwipeableViews
@@ -70,9 +70,9 @@ const TabsInfo = () => {
           <TabPanel value={value} index={2} dir={theme.direction}>
             <Experience />
           </TabPanel>
-          <TabPanel value={value} index={3} dir={theme.direction}>
-            Item Four
-                </TabPanel>
+          {/* <TabPanel value={value} index={3} dir={theme.direction}>
+
+                </TabPanel> */}
         </SwipeableViews>
 
       </Paper >

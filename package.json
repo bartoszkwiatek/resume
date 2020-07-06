@@ -1,6 +1,7 @@
 {
   "name": "react-cv",
   "version": "0.1.0",
+  "homepage": "https://kwiaciu.github.io/cv",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.10.0",
