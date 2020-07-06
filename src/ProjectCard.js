@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardMedia, CardContent, Typography, Button, CardActions, Chip, Grid } from '@material-ui/core';
 
 const ProjectCard = (props) => {
-  console.log(`url('/../public/${props.imgUrl}'`)
   return (
     <Card className={'card'}>
       <CardMedia

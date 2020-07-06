@@ -6,8 +6,8 @@
       "picture": "picture.jpg",
       "email": "bkwiatek3@gmail.com",
       "phone": "+48 889944994",
-      "website": "kwiaciu.github.io",
-      "summary": "A summary of Bartosz Kwiatek... askdjfhakjsdfjadshkjfdsfjdsafdsjk lore Work with technica.. askdjfhakjsdfjadshkjfdsfjdsafdsjk lore Work with technica.. askdjfhakjsdfjadshkjfdsfjdsafdsjk lore Work with technica",
+      "website": "",
+      "summary": "I have been interested in web development for few years, last year I decided to enroll in postgraduate studies in that topic. Currently I am employed as a mechanical engineer but I am looking for positions in front-end, preferably in React or Angular. ",
       "location": {
         "address": "",
         "postalCode": "",
@@ -34,7 +34,7 @@
         "demo": "https://kwiaciu.github.io/GanttChartCreator",
         "code": "https://github.com/kwiaciu/GanttChartCreator",
         "summary": "Web app for planning tasks in calendar. It offers basic functions such as adding, modifying and removing tasks. Also it has additional features such as adding subtasks, colors, few options of customising look. Saving data is implemented through localStorage.",
-        "img": "",
+        "img": "task-planner.png",
         "keywords": [
           "React",
           "Hooks",
@@ -48,6 +48,7 @@
         "demo": "https://kwiaciu.github.io/WeatherApp/",
         "code": "https://github.com/kwiaciu/WeatherApp",
         "summary": "Angular app checking for checking current and future weather for location input. Data is supplied by openweathermap.org",
+        "img": "weather-app.png",
         "keywords": [
           "Angular",
           "REST API",
@@ -60,9 +61,36 @@
         "demo": "https://kwiaciu.github.io/PasswordGenerator/",
         "code": "https://github.com/kwiaciu/PasswordGenerator",
         "summary": "Generates four passwords of set length: random characters, password made from words, numbers, only letters",
+        "img": "password-generator.png",
         "keywords": [
           "React",
           "Class Components"
+        ]
+      },
+      {
+        "title": "MEAN blog",
+        "demo": "https://first-mean-blog.herokuapp.com/",
+        "code": "https://github.com/kwiaciu/meanBlog",
+        "summary": "Simple blog made in MEAN stack. Simple authentification and server.",
+        "img": "mean-blog.png",
+        "keywords": [
+          "Angular",
+          "Express",
+          "Node",
+          "Database"
+        ]
+      },
+      {
+        "title": "Hotel SPA",
+        "demo": "",
+        "code": "https://github.com/kwiaciu/SPA-hotel",
+        "summary": "Single page application for hotel and spa.",
+        "img": "hotel-spa.png",
+        "keywords": [
+          "JQuery",
+          "Fetching data",
+          "HTML/SCSS",
+          "Database"
         ]
       }
     ],
@@ -123,7 +151,8 @@
           "React and Redux",
           "Webpack",
           "Typescript",
-          "Angular"
+          "Angular",
+          "Testing in Cypress"
         ]
       },
       {
@@ -132,7 +161,7 @@
         "studyType": "Google Developer Challenge Scholarship",
         "startDate": "2017-11-06",
         "endDate": "2018-01-06",
-        "desc": "",
+        "desc": "Online course about front-end basics. Aimed at people who would like to change profession and try web development",
         "courses": [
           "HTML5",
           "CSS",
@@ -147,7 +176,7 @@
         "studyType": "Master's degree",
         "startDate": "2016-03-01",
         "endDate": "2018-07-12",
-        "desc": "",
+        "desc": "Thesis: Project and simulation of two rotor, transverse UAV (Catia, ANSYS Mechanical, ANSYS Fluent)",
         "courses": [
           ""
         ]
@@ -158,7 +187,7 @@
         "studyType": "Bachelor's degree",
         "startDate": "2012-10-01",
         "endDate": "2016-02-16",
-        "desc": "",
+        "desc": "Thesis: Simulation of flow in combustion engine inlet (Siemens NX, ANSYS Fluent)",
         "courses": [
           ""
         ]
@@ -411,7 +440,7 @@
     ],
     "education": [
       {
-        "institution": "WSB University Wroclaw",
+        "institution": "WSB University",
         "area": "Front End Developer with Angular",
         "studyType": "Postgraduate studies",
         "startDate": "2019-10-19",
@@ -442,7 +471,7 @@
       },
       {
         "institution": "Wroclaw University of Technology",
-        "area": "Engineering of Aviation",
+        "area": "Aeronautical Engineering",
         "studyType": "Master",
         "startDate": "2016-03-01",
         "endDate": "2018-07-12",
