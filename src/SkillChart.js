@@ -15,10 +15,9 @@ const SkillChart = () => {
     .map(skill => skill.level)
     .filter(skill => !!skill)
 
-  console.log(skillLabels)
-  console.log(skillLevels)
+  // console.log(skillLabels)
+  // console.log(skillLevels)
   useEffect(() => {
-    console.log(theme.palette.main);
     Chart.defaults.global.defaultFontColor = theme.palette.text.primary;
     Chart.defaults.global.defaultFontFamily = "Roboto";
 
