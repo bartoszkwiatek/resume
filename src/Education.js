@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
-import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, makeStyles, List, ListItem } from '@material-ui/core';
+import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, makeStyles, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { StoreContext } from './Store';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { formatDate } from './formatDate'
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+
 
 const useStyles = makeStyles({
   summary: {
@@ -28,7 +30,9 @@ const Education = (props) => {
           context.data[context.language].education.map((school, index) => {
             return (
               <Grid item xs={12} align="center" key={index}>
-                <ExpansionPanel>
+                <ExpansionPanel
+                  variant="outlined"
+                >
                   <ExpansionPanelSummary
                     classes={{ content: classes.summary }}
                     expandIcon={<ExpandMoreIcon />}
@@ -65,10 +69,18 @@ const Education = (props) => {
                       {school.desc}
                     </Typography>
                     <List>
+
                       {school.courses.map((point, index) => {
-                        return (<ListItem key={index}>
-                          {point}
-                        </ListItem>)
+                        return (
+                          <ListItem>
+                            {point && <ListItemIcon>
+                              <ArrowRightIcon></ArrowRightIcon>
+                            </ListItemIcon>}
+                            <ListItemText key={index}>
+                              {point}
+                            </ListItemText>
+                          </ListItem>
+                        )
                       })}
                     </List>
                   </ExpansionPanelDetails>

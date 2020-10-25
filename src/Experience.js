@@ -1,9 +1,12 @@
 
 import React, { useContext } from 'react';
-import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, makeStyles, List, ListItem } from '@material-ui/core';
+import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, makeStyles, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { StoreContext } from './Store';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { formatDate } from './formatDate'
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+
+
 const useStyles = makeStyles({
   summary: {
     flexDirection: 'column',
@@ -30,7 +33,9 @@ const Experience = (props) => {
           context.data[context.language].work.map((job, index) => {
             return (
               <Grid item xs={12} align="center" key={index}>
-                <ExpansionPanel>
+                <ExpansionPanel
+                  elevation={5}
+                >
                   <ExpansionPanelSummary
                     classes={{ content: classes.summary }}
                     expandIcon={<ExpandMoreIcon />}
@@ -66,9 +71,16 @@ const Experience = (props) => {
                     </Typography>
                     <List>
                       {job.highlights.map((point, index) => {
-                        return (<ListItem key={index}>
-                          {point}
-                        </ListItem>)
+                        return (
+                          <ListItem>
+                            {point && <ListItemIcon>
+                              <ArrowRightIcon></ArrowRightIcon>
+                            </ListItemIcon>}
+                            <ListItemText key={index}>
+                              {point}
+                            </ListItemText>
+                          </ListItem>
+                        )
                       })}
                     </List>
                   </ExpansionPanelDetails>

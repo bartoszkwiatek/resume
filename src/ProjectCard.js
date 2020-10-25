@@ -3,7 +3,10 @@ import { Card, CardMedia, CardContent, Typography, Button, CardActions, Chip, Gr
 
 const ProjectCard = (props) => {
   return (
-    <Card className={'card'}>
+    <Card
+      className={'card'}
+      elevation={4}
+    >
       <CardMedia
         component="img"
         alt="Screenshot of project"
