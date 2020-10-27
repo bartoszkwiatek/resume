@@ -3,6 +3,8 @@ import './App.css';
 import { MainInfo } from './MainInfo';
 import { TabsInfo } from './TabsInfo';
 import { CssBaseline, useMediaQuery, Grid } from '@material-ui/core';
+import LinearProgress from '@material-ui/core/LinearProgress';
+
 import Container from '@material-ui/core/Container';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { StoreContext } from './Store';
@@ -43,7 +45,13 @@ function App() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return (
+      <React.Fragment>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <LinearProgress color="primary" />
+        </ThemeProvider>
+      </React.Fragment>)
   } else {
     return (
       <React.Fragment>
