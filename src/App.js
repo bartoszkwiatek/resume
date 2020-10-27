@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { MainInfo } from './MainInfo';
 import { TabsInfo } from './TabsInfo';
+import { Sidebar } from './Sidebar';
 import { CssBaseline, useMediaQuery, Grid } from '@material-ui/core';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
@@ -22,8 +23,8 @@ function App() {
 
   // const classes = styles;
   const theme = Theme(darkMode, primaryColor);
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');   // check prefered user mode 
-
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  // check prefered user mode 
   useEffect(() => {
     setDarkMode(prefersDarkMode)
 
@@ -59,6 +60,9 @@ function App() {
           value={{ data, language, darkMode, setDarkMode, setLanguage, setPrimaryColor }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
+            <Sidebar>
+              <ModeSwitch />
+            </Sidebar>
             <Container fixed>
               <Grid container spacing={5}>
                 <Grid item>
@@ -68,7 +72,6 @@ function App() {
                   <TabsInfo />
                 </Grid>
               </Grid>
-              <ModeSwitch />
             </Container>
           </ThemeProvider>
         </StoreContext.Provider>
