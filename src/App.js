@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     setDarkMode(prefersDarkMode)
 
-    fetch('/cv/db.json')
+    fetch('/resume/db.json')
       // fetch("http://localhost:3333/data")
       .then((response) => response.json())
       .then(

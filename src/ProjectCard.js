@@ -1,17 +1,23 @@
-import React from 'react';
-import { Card, CardMedia, CardContent, Typography, Button, CardActions, Chip, Grid } from '@material-ui/core';
+import React from 'react'
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Button,
+  CardActions,
+  Chip,
+  Grid,
+} from '@material-ui/core'
 
 const ProjectCard = (props) => {
   return (
-    <Card
-      className={'card'}
-      elevation={4}
-    >
+    <Card className={'card'} elevation={4}>
       <CardMedia
         component="img"
         alt="Screenshot of project"
         height="100"
-        image={'/cv/' + props.imgUrl}
+        image={'/resume/' + props.imgUrl}
         title={props.title}
       />
       <CardContent>
@@ -21,20 +27,17 @@ const ProjectCard = (props) => {
         <Typography variant="body2" color="textSecondary" component="p">
           {props.description}
         </Typography>
-        <Grid container
-          justify='space-evenly'
-          flexwrap='wrap'>
+        <Grid container justify="space-evenly" flexwrap="wrap">
           {props.keywords.map((keyword, index) => {
             return (
               <Grid style={{ margin: '0.2rem' }} key={index} item>
                 <Chip label={keyword} />
               </Grid>
-
             )
           })}
         </Grid>
       </CardContent>
-      <CardActions style={{ 'justify-content': 'flex-end' }}>
+      <CardActions style={{ justifyContent: 'flex-end' }}>
         <Button
           size="small"
           color="primary"
@@ -43,7 +46,7 @@ const ProjectCard = (props) => {
           disabled={props.demoUrl === ''}
         >
           Demo
-                </Button>
+        </Button>
         <Button
           size="small"
           color="primary"
@@ -53,7 +56,7 @@ const ProjectCard = (props) => {
           Code
         </Button>
       </CardActions>
-    </Card >
+    </Card>
   )
 }
 export { ProjectCard }
