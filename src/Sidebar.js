@@ -1,32 +1,23 @@
-import React from "react";
-import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
-import { Container } from "@material-ui/core";
+import CssBaseline from '@material-ui/core/CssBaseline'
+import Divider from '@material-ui/core/Divider'
+import Drawer from '@material-ui/core/Drawer'
+import IconButton from '@material-ui/core/IconButton'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import clsx from 'clsx'
+import React from 'react'
 
 // const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
+    display: 'flex',
   },
   hide: {
-    display: "none",
+    display: 'none',
   },
   drawer: {
     // width: drawerWidth,
@@ -34,38 +25,38 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     // width: drawerWidth,
-    height: "auto",
+    height: 'auto',
   },
   drawerHeader: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end',
   },
-}));
+}))
 
 const Sidebar = (props) => {
-  const classes = useStyles();
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const classes = useStyles()
+  const theme = useTheme()
+  const [open, setOpen] = React.useState(false)
 
   const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleDrawerClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <div className={classes.root}>
       <CssBaseline />
       <div
         style={{
-          position: "fixed",
-          top: "1rem",
+          position: 'fixed',
+          top: '1rem',
         }}
       >
         <IconButton
@@ -76,8 +67,8 @@ const Sidebar = (props) => {
         >
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
             <ChevronRightIcon />
@@ -94,21 +85,25 @@ const Sidebar = (props) => {
         classes={{
           paper: classes.drawerPaper,
         }}
-        PaperProps={{ elevation: "10" }}
+        PaperProps={{ elevation: '10' }}
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "ltr" ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === 'ltr' ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
           </IconButton>
         </div>
         <Divider />
         <List>
           {React.Children.map(props.children, (child) => {
-            return <ListItem>{child}</ListItem>;
+            return <ListItem>{child}</ListItem>
           })}
         </List>
       </Drawer>
     </div>
-  );
-};
-export { Sidebar };
+  )
+}
+export { Sidebar }

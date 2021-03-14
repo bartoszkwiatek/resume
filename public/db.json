@@ -7,7 +7,7 @@
       "email": "bkwiatek3@gmail.com",
       "phone": "+48 889944994",
       "website": "",
-      "summary": "I have been interested in web development for a few years now. Last year I decided to enroll in a postgraduate studies on that topic. Currently I am employed as a mechanical engineer but I am looking for opportunities in front-end, preferably in React or Angular.",
+      "summary": "I have been interested in web development for a few years now. I finished postgraduate studies about front end development. Right now I am focusing on expanding my skills by creating various projects. Currently I am still employed as a mechanical engineer, but I am looking for opportunities in front end, preferably in React.",
       "location": {
         "address": "",
         "postalCode": "",
@@ -30,18 +30,27 @@
     },
     "projects": [
       {
+        "title": "MERN Blog",
+        "demo": "https://kwiaciu.github.io/react-blog",
+        "code": "https://flowery-blog.herokuapp.com/",
+        "summary": "Blog application in MERN stack. React with react-router for the frontend. Chakra as components library. Auth0 for the user authentication. Express for the server. MongoDB with Mongoose for database.",
+        "img": "react-blog.png",
+        "keywords": [
+          "React",
+          "react-router",
+          "Express",
+          "MongoDB",
+          "Chakra-UI",
+          "Auth0"
+        ]
+      },
+      {
         "title": "Task planner",
         "demo": "https://kwiaciu.github.io/GanttChartCreator",
         "code": "https://github.com/kwiaciu/GanttChartCreator",
         "summary": "Web app for planning tasks in calendar. It offers basic functions such as adding, modifying and removing tasks. Also it has additional features such as adding subtasks, colors, few options of customising look. Saving data is implemented through localStorage.",
         "img": "task-planner.png",
-        "keywords": [
-          "React",
-          "Hooks",
-          "Redux",
-          "Material-UI",
-          "localStorage"
-        ]
+        "keywords": ["React", "Hooks", "Redux", "Material-UI", "localStorage"]
       },
       {
         "title": "Weather app",
@@ -49,23 +58,15 @@
         "code": "https://github.com/kwiaciu/WeatherApp",
         "summary": "Angular app checking for checking current and future weather for location input. Data is supplied by openweathermap.org",
         "img": "weather-app.png",
-        "keywords": [
-          "Angular",
-          "REST API",
-          "SCSS",
-          "TypeScript"
-        ]
+        "keywords": ["Angular", "REST API", "SCSS", "TypeScript"]
       },
       {
         "title": "Password generator",
-        "demo": "https://kwiaciu.github.io/PasswordGenerator/",
-        "code": "https://github.com/kwiaciu/PasswordGenerator",
+        "demo": "https://kwiaciu.github.io/password-generator/",
+        "code": "https://github.com/kwiaciu/password-generator",
         "summary": "Generates four passwords of set length: random characters, password made from words, numbers, only letters",
         "img": "password-generator.png",
-        "keywords": [
-          "React",
-          "Class Components"
-        ]
+        "keywords": ["React", "Class Components"]
       },
       {
         "title": "MEAN blog",
@@ -73,12 +74,7 @@
         "code": "https://github.com/kwiaciu/meanBlog",
         "summary": "Simple blog made in MEAN stack. Simple authentification and server.",
         "img": "mean-blog.png",
-        "keywords": [
-          "Angular",
-          "Express",
-          "Node",
-          "Database"
-        ]
+        "keywords": ["Angular", "Express", "Node", "Database"]
       },
       {
         "title": "Hotel SPA",
@@ -86,12 +82,7 @@
         "code": "https://github.com/kwiaciu/SPA-hotel",
         "summary": "Single page application for hotel and spa.",
         "img": "hotel-spa.png",
-        "keywords": [
-          "JQuery",
-          "Fetching data",
-          "HTML/SCSS",
-          "Database"
-        ]
+        "keywords": ["JQuery", "Fetching data", "HTML/SCSS", "Database"]
       }
     ],
     "work": [
@@ -162,13 +153,7 @@
         "startDate": "2017-11-06",
         "endDate": "2018-01-06",
         "desc": "Online course about front-end basics. Aimed at people who would like to change profession and try web development",
-        "courses": [
-          "HTML5",
-          "CSS",
-          "JQuery",
-          "JavaScript",
-          "RWD"
-        ]
+        "courses": ["HTML5", "CSS", "JQuery", "JavaScript", "RWD"]
       },
       {
         "institution": "Wroclaw University of Technology",
@@ -177,9 +162,7 @@
         "startDate": "2016-03-01",
         "endDate": "2018-07-12",
         "desc": "Thesis: Project and simulation of two rotor, transverse UAV (Catia, ANSYS Mechanical, ANSYS Fluent)",
-        "courses": [
-          ""
-        ]
+        "courses": [""]
       },
       {
         "institution": "Wroclaw University of Technology",
@@ -188,9 +171,7 @@
         "startDate": "2012-10-01",
         "endDate": "2016-02-16",
         "desc": "Thesis: Simulation of flow in combustion engine inlet (Siemens NX, ANSYS Fluent)",
-        "courses": [
-          ""
-        ]
+        "courses": [""]
       }
     ],
     "awards": [
@@ -244,80 +225,34 @@
       {
         "name": "Designing",
         "level": "35",
-        "keywords": [
-          "Adobe Photoshop",
-          "Adobe Illustrator",
-          "Adobe XD"
-        ]
+        "keywords": ["Adobe Photoshop", "Adobe Illustrator", "Adobe XD"]
       },
       {
         "name": "Others",
         "level": "",
-        "keywords": [
-          "Cypress",
-          "Python",
-          "Django",
-          "JQuery",
-          "Bootstrap"
-        ]
+        "keywords": ["Cypress", "Python", "Django", "JQuery", "Bootstrap"]
       }
     ],
     "languages": [
       {
         "language": "Polish",
         "fluency": "7",
-        "scale": [
-          "A0",
-          "A1",
-          "A2",
-          "B1",
-          "B2",
-          "C1",
-          "C2",
-          "Native"
-        ]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
       },
       {
         "language": "English",
         "fluency": "5",
-        "scale": [
-          "A0",
-          "A1",
-          "A2",
-          "B1",
-          "B2",
-          "C1",
-          "C2",
-          "Native"
-        ]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
       },
       {
         "language": "German",
         "fluency": "1",
-        "scale": [
-          "A0",
-          "A1",
-          "A2",
-          "B1",
-          "B2",
-          "C1",
-          "C2",
-          "Native"
-        ]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
       },
       {
         "language": "Japanese",
         "fluency": "0",
-        "scale": [
-          "A0",
-          "A1",
-          "A2",
-          "B1",
-          "B2",
-          "C1",
-          "C2",
-          "Native"
-        ]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
       }
     ],
     "interests": [
@@ -367,31 +302,19 @@
         "title": "project title",
         "website": "www.videofotex.pl",
         "summary": "description of project",
-        "keywords": [
-          "html",
-          "JQuery",
-          "Bootstrap"
-        ]
+        "keywords": ["html", "JQuery", "Bootstrap"]
       },
       {
         "title": "project title",
         "website": "www.videofotex.pl",
         "summary": "description of project",
-        "keywords": [
-          "html",
-          "JQuery",
-          "Bootstrap"
-        ]
+        "keywords": ["html", "JQuery", "Bootstrap"]
       },
       {
         "title": "project title",
         "website": "www.videofotex.pl",
         "summary": "description of project",
-        "keywords": [
-          "html",
-          "JQuery",
-          "Bootstrap"
-        ]
+        "keywords": ["html", "JQuery", "Bootstrap"]
       }
     ],
     "work": [
@@ -461,13 +384,7 @@
         "startDate": "2017-11-06",
         "endDate": "2018-01-06",
         "gpa": "",
-        "courses": [
-          "HTML5",
-          "CSS",
-          "JQuery",
-          "JavaScript",
-          "RWD"
-        ]
+        "courses": ["HTML5", "CSS", "JQuery", "JavaScript", "RWD"]
       },
       {
         "institution": "Wroclaw University of Technology",
@@ -476,9 +393,7 @@
         "startDate": "2016-03-01",
         "endDate": "2018-07-12",
         "gpa": "",
-        "courses": [
-          ""
-        ]
+        "courses": [""]
       },
       {
         "institution": "Wroclaw University of Technology",
@@ -487,9 +402,7 @@
         "startDate": "2012-10-01",
         "endDate": "2016-02-16",
         "gpa": "",
-        "courses": [
-          ""
-        ]
+        "courses": [""]
       }
     ],
     "awards": [
@@ -543,79 +456,34 @@
       {
         "name": "Designing",
         "level": "35",
-        "keywords": [
-          "Adobe Photoshop",
-          "Adobe Illustrator",
-          "Adobe XD"
-        ]
+        "keywords": ["Adobe Photoshop", "Adobe Illustrator", "Adobe XD"]
       },
       {
         "name": "Others",
         "level": "",
-        "keywords": [
-          "Python",
-          "Django",
-          "JQuery",
-          "Bootstrap"
-        ]
+        "keywords": ["Python", "Django", "JQuery", "Bootstrap"]
       }
     ],
     "languages": [
       {
         "language": "Polish",
         "fluency": "7",
-        "scale": [
-          "A0",
-          "A1",
-          "A2",
-          "B1",
-          "B2",
-          "C1",
-          "C2",
-          "Native"
-        ]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
       },
       {
         "language": "English",
         "fluency": "6",
-        "scale": [
-          "A0",
-          "A1",
-          "A2",
-          "B1",
-          "B2",
-          "C1",
-          "C2",
-          "Native"
-        ]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
       },
       {
         "language": "German",
         "fluency": "1",
-        "scale": [
-          "A0",
-          "A1",
-          "A2",
-          "B1",
-          "B2",
-          "C1",
-          "C2",
-          "Native"
-        ]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
       },
       {
         "language": "Japanese",
         "fluency": "0",
-        "scale": [
-          "A0",
-          "A1",
-          "A2",
-          "B1",
-          "B2",
-          "C1",
-          "C2",
-          "Native"
-        ]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
       }
     ],
     "interests": [
