@@ -27,7 +27,12 @@ const ProjectCard = (props) => {
         <Typography variant="body2" color="textSecondary" component="p">
           {props.description}
         </Typography>
-        <Grid container justify="space-evenly" flexwrap="wrap">
+        <Grid
+          style={{ margin: '0.5rem' }}
+          container
+          justify="space-evenly"
+          flexwrap="wrap"
+        >
           {props.keywords.map((keyword, index) => {
             return (
               <Grid style={{ margin: '0.2rem' }} key={index} item>

@@ -17,6 +17,22 @@ import { StoreContext } from './Store'
 import { TabsInfo } from './TabsInfo'
 import { Theme } from './Theme'
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: theme.spacing(3),
+    [theme.breakpoints.down('xs')]: {
+      padding: theme.spacing(0),
+      // backgroundColor: pink[100],
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(1),
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing(2),
+    },
+  },
+}))
+
 function App() {
   const [error, setError] = useState(null)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -24,6 +40,7 @@ function App() {
   const [language, setLanguage] = useState('en')
   const [darkMode, setDarkMode] = useState(false)
   const [primaryColor, setPrimaryColor] = useState('#e91e63')
+  const classes = useStyles()
 
   // const classes = styles;
   const theme = Theme(darkMode, primaryColor)
@@ -85,9 +102,13 @@ function App() {
               </Toolbar>
             </AppBar>
 
-            <Container style={{ paddingTop: '2.5rem' }} fixed>
-              <Grid container spacing={5}>
-                <Grid item>
+            <Container
+              className={classes.root}
+              // style={{ paddingTop: '2.5rem' }}
+              fixed
+            >
+              <Grid container>
+                <Grid item style={{ width: '100%', paddingBottom: '2rem' }}>
                   <MainInfo />
                 </Grid>
                 <Grid item style={{ width: '100%' }}>
