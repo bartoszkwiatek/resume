@@ -31,8 +31,8 @@
     "projects": [
       {
         "title": "MERN Blog",
-        "demo": "https://kwiaciu.github.io/react-blog",
-        "code": "https://flowery-blog.herokuapp.com/",
+        "demo": "https://flowery-blog.herokuapp.com/",
+        "code": "https://github.com/kwiaciu/react-blog",
         "summary": "Blog application in MERN stack. React with react-router for the frontend. Chakra as components library. Auth0 for the user authentication. Express for the server. MongoDB with Mongoose for database.",
         "img": "react-blog.png",
         "keywords": [
