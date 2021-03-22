@@ -194,12 +194,12 @@
     "skills": [
       {
         "name": "HTML5",
-        "level": "60",
+        "level": "65",
         "keywords": []
       },
       {
         "name": "CSS/SCSS",
-        "level": "60",
+        "level": "70",
         "keywords": []
       },
       {
@@ -209,7 +209,7 @@
       },
       {
         "name": "React",
-        "level": "25",
+        "level": "45",
         "keywords": []
       },
       {
@@ -251,7 +251,7 @@
       },
       {
         "language": "Japanese",
-        "fluency": "0",
+        "fluency": "1",
         "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
       }
     ],

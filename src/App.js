@@ -8,6 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import MenuIcon from '@material-ui/icons/Menu'
 import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
 import { MainInfo } from './MainInfo'
 // import { styles } from './styles';
@@ -77,19 +78,19 @@ function App() {
     )
   } else {
     return (
-      <React.Fragment>
-        <StoreContext.Provider
-          value={{
-            data,
-            language,
-            darkMode,
-            setDarkMode,
-            setLanguage,
-            setPrimaryColor,
-          }}
-        >
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
+      <StoreContext.Provider
+        value={{
+          data,
+          language,
+          darkMode,
+          setDarkMode,
+          setLanguage,
+          setPrimaryColor,
+        }}
+      >
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Router>
             <AppBar position="static">
               <Toolbar>
                 <IconButton edge="start" color="inherit" aria-label="menu">
@@ -101,7 +102,6 @@ function App() {
                 <ModeSwitch />
               </Toolbar>
             </AppBar>
-
             <Container
               className={classes.root}
               // style={{ paddingTop: '2.5rem' }}
@@ -112,13 +112,13 @@ function App() {
                   <MainInfo />
                 </Grid>
                 <Grid item style={{ width: '100%' }}>
-                  <TabsInfo />
+                  <Route path="/:tab" component={TabsInfo} />
                 </Grid>
               </Grid>
             </Container>
-          </ThemeProvider>
-        </StoreContext.Provider>
-      </React.Fragment>
+          </Router>
+        </ThemeProvider>
+      </StoreContext.Provider>
     )
   }
 }
