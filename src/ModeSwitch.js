@@ -22,6 +22,7 @@ const useStyles = makeStyles({
 const ModeSwitch = () => {
   const context = useContext(StoreContext)
   const classes = useStyles()
+  console.log(context.availableLanguages)
 
   const handleChange = (event) => {
     context.setDarkMode(event.target.checked)

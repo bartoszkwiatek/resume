@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
+import { LanguageSelect } from './LanguageSelect'
 import { MainInfo } from './MainInfo'
 // import { styles } from './styles';
 import { ModeSwitch } from './ModeSwitch'
@@ -40,6 +41,7 @@ function App() {
   const [data, setData] = useState({})
   const [language, setLanguage] = useState('en')
   const [darkMode, setDarkMode] = useState(false)
+  const [availableLanguages, setAvailableLanguages] = useState([])
   const [primaryColor, setPrimaryColor] = useState('#e91e63')
   const classes = useStyles()
 
@@ -57,6 +59,7 @@ function App() {
         (result) => {
           setData(result)
           setIsLoaded(true)
+          setAvailableLanguages(Object.keys(result))
         },
         (error) => {
           setError(error)
@@ -83,6 +86,7 @@ function App() {
           data,
           language,
           darkMode,
+          availableLanguages,
           setDarkMode,
           setLanguage,
           setPrimaryColor,
@@ -99,6 +103,7 @@ function App() {
                 <Typography variant="h6" style={{ flexGrow: 1 }}>
                   Resume
                 </Typography>
+                <LanguageSelect />
                 <ModeSwitch />
               </Toolbar>
             </AppBar>
