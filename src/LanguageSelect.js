@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core'
+import { grey } from '@material-ui/core/colors'
 import FormControl from '@material-ui/core/FormControl'
 // import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -12,12 +13,22 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     marginRight: theme.spacing(4),
     minWidth: 120,
-    color: theme.palette.primary.contrastText,
+    color: grey[100],
   },
-  root: {
-    '&$focused': { color: theme.palette.primary.contrastText },
+  inputBase: {
+    color: grey[100],
   },
-  focused: {},
+  select: {
+    '&:before': {
+      borderColor: grey[100],
+    },
+    '&:after': {
+      borderColor: grey[100],
+    },
+  },
+  icon: {
+    fill: grey[100],
+  },
 }))
 const LanguageSelect = () => {
   const context = useContext(StoreContext)
@@ -30,20 +41,18 @@ const LanguageSelect = () => {
 
   return (
     <FormControl className={classes.formControl}>
-      {/* <InputLabel
-        id="language-label"
-        disableAnimation={true}
-        classes={{ root: classes.root, focused: classes.focused }}
-      >
-        {translations[context.language].languages}
-      </InputLabel> */}
       <Select
         labelId="language-label"
         id="language-select"
-        className={classes.selectEmpty}
         value={context.language}
         onChange={handleChange}
         placeholder="language"
+        className={classes.select}
+        inputProps={{
+          classes: {
+            icon: classes.icon,
+          },
+        }}
       >
         {context.availableLanguages.map((language) => (
           <MenuItem value={language}>{language}</MenuItem>

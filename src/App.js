@@ -85,6 +85,7 @@ function App() {
           language,
           darkMode,
           availableLanguages,
+          primaryColor,
           setDarkMode,
           setLanguage,
           setPrimaryColor,
