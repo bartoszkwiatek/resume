@@ -7,7 +7,7 @@
       "email": "bkwiatek3@gmail.com",
       "phone": "+48 889944994",
       "website": "",
-      "summary": "I have been interested in web development for a few years now. After university, I finished postgraduate studies about front end development. Right now I am focusing on expanding my skills by creating various projects. Currently I am still employed as a mechanical engineer, but I am looking for opportunities in front end, preferably in React.",
+      "summary": "I have been interested in web development for a few years now. After graduating from university as mechanical engineer, I finished postgraduate studies about front end development. Right now I am focusing on expanding my skills by creating various projects. Currently I am still employed as a mechanical engineer, but I am looking for opportunities in front end, preferably in React.",
       "location": {
         "address": "",
         "postalCode": "",
@@ -33,7 +33,7 @@
         "title": "MERN Blog",
         "demo": "https://flowery-blog.herokuapp.com/",
         "code": "https://github.com/kwiaciu/react-blog",
-        "summary": "Blog application in MERN stack. React with react-router for the frontend. Chakra as components library. Auth0 for the user authentication. Express for the server. MongoDB with Mongoose for database.",
+        "summary": "Blog application in MERN stack. React with react-router for the frontend. Chakra as UI library. Auth0 for the user authentication. Express for the server. MongoDB with Mongoose for database.",
         "img": "react-blog.png",
         "keywords": [
           "React",
@@ -48,7 +48,7 @@
         "title": "Task planner",
         "demo": "https://kwiaciu.github.io/GanttChartCreator",
         "code": "https://github.com/kwiaciu/GanttChartCreator",
-        "summary": "Web app for planning tasks in calendar. It offers basic functions such as adding, modifying and removing tasks. Also it has additional features such as adding subtasks, colors, few options of customising look. Saving data is implemented through localStorage.",
+        "summary": "Web app for planning tasks inspired by Gantt chart. It offers basic functions such as adding, modifying and removing tasks. Also additional features such as adding subtasks, colors and few options of customising view. Saving data is implemented through localStorage.",
         "img": "task-planner.png",
         "keywords": ["React", "Hooks", "Redux", "Material-UI", "localStorage"]
       },
@@ -72,7 +72,7 @@
         "title": "MEAN blog",
         "demo": "https://first-mean-blog.herokuapp.com/",
         "code": "https://github.com/kwiaciu/meanBlog",
-        "summary": "Simple blog made in MEAN stack. Simple authentification and server.",
+        "summary": "Simple blog made in MEAN stack.",
         "img": "mean-blog.png",
         "keywords": ["Angular", "Express", "Node", "Database"]
       },
@@ -82,7 +82,7 @@
         "code": "https://github.com/kwiaciu/SPA-hotel",
         "summary": "Single page application for hotel and spa.",
         "img": "hotel-spa.png",
-        "keywords": ["JQuery", "Fetching data", "HTML/SCSS", "Database"]
+        "keywords": ["JQuery", "REST API", "HTML/SCSS", "Database"]
       }
     ],
     "work": [
@@ -94,6 +94,7 @@
         "endDate": "now",
         "summary": "Work with technical documentation for machines in wet chemical processing industry.",
         "highlights": [
+          "Creating scripts for automating tasks - Python and VBA",
           "Desigining plastic welded constructions",
           "Creating and modifying parts and assemblies (SolidWorks)",
           "Preparing technical documentation",
@@ -111,7 +112,7 @@
           "Desigining sheet metal and welded constructions",
           "Creating and modifying parts and assemblies (Solid Edge)",
           "Preparing technical documentation",
-          "Maintaining documentation in PDM system (Aras PLM)",
+          "Maintaining documentation in PLM system (Aras PLM)",
           "Performing FEM calculations (ANSYS Mechanical)"
         ]
       }
@@ -123,7 +124,7 @@
         "website": "http://www.best.wroclaw.pl/",
         "startDate": "2014-03-20",
         "endDate": "2017-11-10",
-        "summary": "Taking active part in preparing events for students of technical universities",
+        "summary": "Preparing events for students of technical universities",
         "highlights": [
           "Designing graphic materials such as flyers, posters and banners"
         ]
@@ -136,7 +137,7 @@
         "studyType": "Postgraduate studies",
         "startDate": "2019-10-19",
         "endDate": "2020-07-10",
-        "desc": "Postgraduate studies about front-end development. Courses included: basics of UI and UX prototyping, RWD, CSS preprocessors, backend basics(node, express), creating single page apps using pure JS, JQuery, Angular and React, testing basics (Cypress).",
+        "desc": "Postgraduate studies about front end development. Courses included: basics of UI and UX prototyping, RWD, CSS preprocessors, backend basics(node, express), creating single page apps using pure JS, JQuery, Angular and React, testing basics (Cypress).",
         "courses": [
           "EcmaScript6",
           "React and Redux",
@@ -160,7 +161,7 @@
         "area": "Aeronautical Engineering",
         "studyType": "Master's degree",
         "startDate": "2016-03-01",
-        "endDate": "2018-07-12",
+        "endDate": "2017-07-12",
         "desc": "Thesis: Project and simulation of two rotor, transverse UAV (Catia, ANSYS Mechanical, ANSYS Fluent)",
         "courses": [""]
       },
@@ -270,13 +271,13 @@
   },
   "pl": {
     "basics": {
-      "name": "Bartosz Kwiatek - PL",
+      "name": "Bartosz Kwiatek",
       "label": "Front End Developer",
       "picture": "picture.jpg",
       "email": "bkwiatek3@gmail.com",
       "phone": "+48 889944994",
-      "website": "kwiaciu.github.io",
-      "summary": "A summary of Bartosz Kwiatek... askdjfhakjsdfjadshkjfdsfjdsafdsjk lore Work with technical documentation for machines in wet chemical processing industry. Maintaining documentation in PDM system (Aras PLM), Performing FEM calculations (ANSYS Mechanical)",
+      "website": "",
+      "summary": "Od kilku lat interesuje się web developmentem. Po ukończeniu studiów mechanicznych zapisałem się na studia podyplomowe o front endzie. Aktualnie skupiam się na rozwijaniu swoich umiejętności poprzez tworzenie różnych projektów. Pracuje nadal jako inżynier mechanik ale szukam możliwości zdobycia pierwszego doświadczenia zawodowego jako front end developer",
       "location": {
         "address": "",
         "postalCode": "",
@@ -299,82 +300,121 @@
     },
     "projects": [
       {
-        "title": "project title",
-        "website": "www.videofotex.pl",
-        "summary": "description of project",
-        "keywords": ["html", "JQuery", "Bootstrap"]
+        "title": "MERN Blog",
+        "demo": "https://flowery-blog.herokuapp.com/",
+        "code": "https://github.com/kwiaciu/react-blog",
+        "summary": "Blog stworzony w stacku MERN. W projekcie wykorzystane zostało kilka bibliotek. React z react-routerem. Chakra UI jako biblioteka komponentów. Auth0 do uwierzytelniania. Express do serwera. MongoDB z Mongoose dla bazy danych ",
+        "img": "react-blog.png",
+        "keywords": [
+          "React",
+          "react-router",
+          "Express",
+          "MongoDB",
+          "Chakra-UI",
+          "Auth0"
+        ]
       },
       {
-        "title": "project title",
-        "website": "www.videofotex.pl",
-        "summary": "description of project",
-        "keywords": ["html", "JQuery", "Bootstrap"]
+        "title": "Task planner",
+        "demo": "https://kwiaciu.github.io/GanttChartCreator",
+        "code": "https://github.com/kwiaciu/GanttChartCreator",
+        "summary": "Aplikacja do planowania zadań inspirowana wykresem Gantta. Oferuje funkcje takie jak dodawanie, modyfikacje oraz usuwanie zadań, oraz personalizacje wyglądu. Zapisywanie danych odbywa się poprzez localStorage",
+        "img": "task-planner.png",
+        "keywords": ["React", "Hooks", "Redux", "Material-UI", "localStorage"]
       },
       {
-        "title": "project title",
-        "website": "www.videofotex.pl",
-        "summary": "description of project",
-        "keywords": ["html", "JQuery", "Bootstrap"]
+        "title": "Weather app",
+        "demo": "https://kwiaciu.github.io/WeatherApp/",
+        "code": "https://github.com/kwiaciu/WeatherApp",
+        "summary": "Aplikacja pogodowa napisana w Angularze do sprawdzania akualnej pogody oraz prognozy. Dane są pobierane z API openweathermap.org",
+        "img": "weather-app.png",
+        "keywords": ["Angular", "REST API", "SCSS", "TypeScript"]
+      },
+      {
+        "title": "Generator haseł",
+        "demo": "https://kwiaciu.github.io/password-generator/",
+        "code": "https://github.com/kwiaciu/password-generator",
+        "summary": "Tworzy 4 typy ciągów znaków o zadanej długości: losowe znaki, losowe słowa, cyfry, litery z samogłoskami pomiędzy",
+        "img": "password-generator.png",
+        "keywords": ["React", "Class Components"]
+      },
+      {
+        "title": "MEAN blog",
+        "demo": "https://first-mean-blog.herokuapp.com/",
+        "code": "https://github.com/kwiaciu/meanBlog",
+        "summary": "Prosty blog stworzony w stacku MEAN",
+        "img": "mean-blog.png",
+        "keywords": ["Angular", "Express", "Node", "Database"]
+      },
+      {
+        "title": "Hotel SPA",
+        "demo": "",
+        "code": "https://github.com/kwiaciu/SPA-hotel",
+        "summary": "Aplikacja SPA dla hotelu oraz spa stworzona przy użyciu JQuery ",
+        "img": "hotel-spa.png",
+        "keywords": ["JQuery", "REST API", "HTML/SCSS", "Database"]
       }
     ],
     "work": [
       {
         "company": "RENA Polska",
-        "position": "Mechanical Engineer",
+        "position": "Inżynier mechanik",
         "website": "https://www.rena.com/en/",
         "startDate": "2020-01-07",
-        "endDate": "now",
-        "summary": "Work with technical documentation for machines in wet chemical processing industry.",
+        "endDate": "teraz",
+        "summary": "Praca z dokumentacją techniczną maszyn do przemysłu procesowania chemicznego",
         "highlights": [
-          "Desigining plastic welded constructions",
-          "Creating and modifying parts and assemblies (SolidWorks)",
-          "Preparing technical documentation",
-          "Maintaining documentation in PDM system (KeyTech)"
+          "Pisanie skryptów do automatyzacji zadań - Python i VBA",
+          "Konstruowanie maszyn z tworzyw sztucznych",
+          "Tworzenie części oraz złożeń (SolidWorks)",
+          "Przygotowywanie dokumentacji technicznej",
+          "Zarządzanie dokumentacją w systemie PDM (KeyTech)"
         ]
       },
       {
-        "company": "DeLaval Operations ",
-        "position": "Mechanical Engineer",
+        "company": "DeLaval Operations",
+        "position": "Konstruktor",
         "website": "https://www.delaval.com/",
         "startDate": "2015-07-10",
         "endDate": "2019-03-30",
-        "summary": "Creating technical documentation for agriculture machines and miliking systems.",
+        "summary": "Tworzenie dokumentacji technicznej maszyn dla rolnictwa",
         "highlights": [
-          "Desigining sheet metal and welded constructions",
-          "Creating and modifying parts and assemblies (Solid Edge)",
-          "Preparing technical documentation",
-          "Maintaining documentation in PDM system (Aras PLM)",
-          "Performing FEM calculations (ANSYS Mechanical)"
+          "Projektowanie konstrukcji stalowych giętych oraz spawanych",
+          "Tworzenie części oraz złożeń (Solid Edge)",
+          "Przygotowywanie dokumentacji technicznej",
+          "Zarządzanie dokumentacją w systemie PDM (Aras PLM)",
+          "Przeprowadzanie analiz MES (ANSYS Mechanical)"
         ]
       }
     ],
     "volunteer": [
       {
         "organization": "BEST Wroclaw",
-        "position": "Graphic designer, Photographer",
+        "position": "Grafik, fotograf",
         "website": "http://www.best.wroclaw.pl/",
         "startDate": "2014-03-20",
         "endDate": "2017-11-10",
-        "summary": "Taking active part in preparing events for students of technical universities",
+        "summary": "Przygotowywanie wydarzeń dla studentów uniwersytetów technicznych",
         "highlights": [
-          "Designing graphic materials such as flyers, posters and banners"
+          "Przygotowywanie materiałów graficznych takich jak ulotki, plakaty oraz banery"
         ]
       }
     ],
     "education": [
       {
-        "institution": "WSB University",
-        "area": "Front End Developer with Angular",
-        "studyType": "Postgraduate studies",
+        "institution": "Wyższa Szkoła Bankowa Wroclaw",
+        "area": "Front End Developer z Angular",
+        "studyType": "Studia podyplomowe",
         "startDate": "2019-10-19",
         "endDate": "2020-07-10",
-        "gpa": "",
+        "desc": "Studia podyplomowe na temat front endu. Program obejmował: podstawy UX oraz UI, RWD, preprocesory CSS, podstawy backendu (node, express), tworzenie aplikacji internetowych przy użyciu: JS, JQuery, Angular oraz React, podstawy testowania (Cypress).",
         "courses": [
           "EcmaScript6",
-          "React and Redux",
+          "React i Redux",
           "Webpack",
           "Typescript",
-          "Angular"
+          "Angular",
+          "Testy w Cypress"
         ]
       },
       {
@@ -383,25 +423,25 @@
         "studyType": "Google Developer Challenge Scholarship",
         "startDate": "2017-11-06",
         "endDate": "2018-01-06",
-        "gpa": "",
+        "desc": "Kurs internetowy obejmujący podstawy front endu. Kierowany do osób które chciałyby zmienić profesję",
         "courses": ["HTML5", "CSS", "JQuery", "JavaScript", "RWD"]
       },
       {
-        "institution": "Wroclaw University of Technology",
-        "area": "Aeronautical Engineering",
-        "studyType": "Master",
+        "institution": "Politechnika Wrocławska",
+        "area": "Inżynieria lotnicza",
+        "studyType": "Studia II stopnia",
         "startDate": "2016-03-01",
-        "endDate": "2018-07-12",
-        "gpa": "",
+        "endDate": "2017-07-12",
+        "desc": "Praca dyplomowa: projekt i symulacja bezzałogowego śmigłowca w układzie poprzecznym (Catia, ANSYS Mechanical, ANSYS Fluent)",
         "courses": [""]
       },
       {
-        "institution": "Wroclaw University of Technology",
-        "area": "Mechanical Engineering",
-        "studyType": "Bachelor",
+        "institution": "Politechnika Wrocławska",
+        "area": "Mechanika i budowa maszyn",
+        "studyType": "Studia I stopnia",
         "startDate": "2012-10-01",
         "endDate": "2016-02-16",
-        "gpa": "",
+        "desc": "Praca dyplomowa: Symulacja przepływu u układzie dolotowym silnika spalinowego (Siemens NX, ANSYS Fluent)",
         "courses": [""]
       }
     ],
@@ -425,22 +465,22 @@
     "skills": [
       {
         "name": "HTML5",
-        "level": "60",
+        "level": "65",
         "keywords": []
       },
       {
         "name": "CSS/SCSS",
-        "level": "60",
+        "level": "70",
         "keywords": []
       },
       {
-        "name": "JavaScript/ES6",
+        "name": "JavaScript",
         "level": "55",
         "keywords": []
       },
       {
         "name": "React",
-        "level": "25",
+        "level": "45",
         "keywords": []
       },
       {
@@ -454,36 +494,36 @@
         "keywords": []
       },
       {
-        "name": "Designing",
+        "name": "Projektowanie",
         "level": "35",
         "keywords": ["Adobe Photoshop", "Adobe Illustrator", "Adobe XD"]
       },
       {
-        "name": "Others",
+        "name": "Inne",
         "level": "",
-        "keywords": ["Python", "Django", "JQuery", "Bootstrap"]
+        "keywords": ["Cypress", "Python", "Django", "JQuery", "Bootstrap"]
       }
     ],
     "languages": [
       {
-        "language": "Polish",
+        "language": "polski",
         "fluency": "7",
-        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "rodzimy"]
       },
       {
-        "language": "English",
-        "fluency": "6",
-        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
+        "language": "angielski",
+        "fluency": "5",
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "rodzimy"]
       },
       {
-        "language": "German",
+        "language": "niemiecki",
         "fluency": "1",
-        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "rodzimy"]
       },
       {
-        "language": "Japanese",
-        "fluency": "0",
-        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "Native"]
+        "language": "japoński",
+        "fluency": "1",
+        "scale": ["A0", "A1", "A2", "B1", "B2", "C1", "C2", "rodzimy"]
       }
     ],
     "interests": [
