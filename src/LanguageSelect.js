@@ -19,6 +19,8 @@ const useStyles = makeStyles((theme) => ({
     color: grey[100],
   },
   select: {
+    color: grey[100],
+
     '&:before': {
       borderColor: grey[100],
     },
@@ -33,8 +35,6 @@ const useStyles = makeStyles((theme) => ({
 const LanguageSelect = () => {
   const context = useContext(StoreContext)
   const classes = useStyles()
-
-  console.log(context.availableLanguages)
   const handleChange = (event) => {
     context.setLanguage(event.target.value)
   }
