@@ -17,6 +17,7 @@ import { Projects } from './Projects'
 import { StoreContext } from './Store'
 import { styles } from './styles'
 import { TabPanel } from './TabPanel'
+import { translations } from './translations'
 
 const TabsInfo = ({ match }) => {
   const context = useContext(StoreContext)
@@ -47,7 +48,6 @@ const TabsInfo = ({ match }) => {
 
         break
     }
-    // console.log(match)
   }, [match])
 
   const handleChange = (event, newValue) => {
@@ -86,9 +86,18 @@ const TabsInfo = ({ match }) => {
           textColor="primary"
           centered
         >
-          <Tab icon={<CodeIcon />} label="Projects" />
-          <Tab icon={<SchoolIcon />} label="Education" />
-          <Tab icon={<WorkIcon />} label="Experience" />
+          <Tab
+            icon={<CodeIcon />}
+            label={translations[context.language].projects}
+          />
+          <Tab
+            icon={<SchoolIcon />}
+            label={translations[context.language].education}
+          />
+          <Tab
+            icon={<WorkIcon />}
+            label={translations[context.language].experience}
+          />
           {/* <Tab icon={<PaletteIcon />} label="Skills" /> */}
         </Tabs>
 

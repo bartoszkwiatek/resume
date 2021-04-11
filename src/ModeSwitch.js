@@ -5,6 +5,7 @@ import FormGroup from '@material-ui/core/FormGroup'
 import Switch from '@material-ui/core/Switch'
 import React, { useContext } from 'react'
 import { StoreContext } from './Store'
+import { translations } from './translations'
 
 const useStyles = makeStyles({
   switchBase: {
@@ -22,7 +23,6 @@ const useStyles = makeStyles({
 const ModeSwitch = () => {
   const context = useContext(StoreContext)
   const classes = useStyles()
-  console.log(context.availableLanguages)
 
   const handleChange = (event) => {
     context.setDarkMode(event.target.checked)
@@ -43,7 +43,7 @@ const ModeSwitch = () => {
             name="dark"
           />
         }
-        label="Dark mode"
+        label={translations[context.language].darkmode}
       />
     </FormGroup>
   )

@@ -6,18 +6,16 @@ import LinearProgress from '@material-ui/core/LinearProgress'
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import MenuIcon from '@material-ui/icons/Menu'
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
 import { LanguageSelect } from './LanguageSelect'
 import { MainInfo } from './MainInfo'
-// import { styles } from './styles';
 import { ModeSwitch } from './ModeSwitch'
-import { Sidebar } from './Sidebar'
 import { StoreContext } from './Store'
 import { TabsInfo } from './TabsInfo'
 import { Theme } from './Theme'
+import { translations } from './translations'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -97,21 +95,19 @@ function App() {
           <Router>
             <AppBar position="static">
               <Toolbar>
-                <IconButton edge="start" color="inherit" aria-label="menu">
-                  {/* <MenuIcon /> */}
-                </IconButton>
+                <IconButton
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                ></IconButton>
                 <Typography variant="h6" style={{ flexGrow: 1 }}>
-                  Resume
+                  {translations[language].title}
                 </Typography>
                 <LanguageSelect />
                 <ModeSwitch />
               </Toolbar>
             </AppBar>
-            <Container
-              className={classes.root}
-              // style={{ paddingTop: '2.5rem' }}
-              fixed
-            >
+            <Container className={classes.root} fixed>
               <Grid container>
                 <Grid item style={{ width: '100%', paddingBottom: '2rem' }}>
                   <MainInfo />

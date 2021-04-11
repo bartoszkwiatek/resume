@@ -71,9 +71,9 @@ const Experience = (props) => {
                     id="panel1a-header"
                   >
                     <Typography className={''} variant={'overline'}>
-                      {formatDate(job.startDate) +
+                      {formatDate(job.startDate, context.language) +
                         ' - ' +
-                        formatDate(job.endDate)}
+                        formatDate(job.endDate, context.language)}
                     </Typography>
                     <Typography className={''} variant={'h5'}>
                       {job.position}

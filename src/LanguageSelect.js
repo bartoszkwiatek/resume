@@ -1,10 +1,11 @@
 import { makeStyles } from '@material-ui/core'
 import FormControl from '@material-ui/core/FormControl'
-import InputLabel from '@material-ui/core/InputLabel'
+// import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
 import React, { useContext } from 'react'
 import { StoreContext } from './Store'
+import { translations } from './translations'
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -34,7 +35,7 @@ const LanguageSelect = () => {
         disableAnimation={true}
         classes={{ root: classes.root, focused: classes.focused }}
       >
-        Language
+        {translations[context.language].languages}
       </InputLabel> */}
       <Select
         labelId="language-label"

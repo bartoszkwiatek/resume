@@ -69,9 +69,9 @@ const Education = (props) => {
                     id="panel1a-header"
                   >
                     <Typography className={''} variant={'overline'}>
-                      {formatDate(school.startDate) +
+                      {formatDate(school.startDate, context.language) +
                         ' - ' +
-                        formatDate(school.endDate)}
+                        formatDate(school.endDate, context.language)}
                     </Typography>
                     <Typography className={''} variant={'h5'}>
                       {school.area}
