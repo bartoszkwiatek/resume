@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core'
-import { grey } from '@material-ui/core/colors'
 import FormControl from '@material-ui/core/FormControl'
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -7,18 +6,18 @@ import Select from '@material-ui/core/Select'
 import React, { useContext } from 'react'
 import { StoreContext } from './Store'
 
-const useStyles = makeStyles({
-  switchBase: {
-    '&$checked': {
-      color: grey[800],
-    },
-    '&$checked + $track': {
-      backgroundColor: grey[700],
-    },
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    marginRight: theme.spacing(4),
+    minWidth: 120,
+    color: theme.palette.primary.contrastText,
   },
-  checked: {},
-  track: {},
-})
+  root: {
+    '&$focused': { color: theme.palette.primary.contrastText },
+  },
+  focused: {},
+}))
 const LanguageSelect = () => {
   const context = useContext(StoreContext)
   const classes = useStyles()
@@ -30,12 +29,20 @@ const LanguageSelect = () => {
 
   return (
     <FormControl className={classes.formControl}>
-      <InputLabel id="language-label">Language</InputLabel>
+      {/* <InputLabel
+        id="language-label"
+        disableAnimation={true}
+        classes={{ root: classes.root, focused: classes.focused }}
+      >
+        Language
+      </InputLabel> */}
       <Select
         labelId="language-label"
         id="language-select"
+        className={classes.selectEmpty}
         value={context.language}
         onChange={handleChange}
+        placeholder="language"
       >
         {context.availableLanguages.map((language) => (
           <MenuItem value={language}>{language}</MenuItem>
